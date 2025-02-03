@@ -1,0 +1,38 @@
+{
+  "name": "yarn-constraints-rules",
+  "main": "dist/index.js",
+  "version": "0.1.0",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": [
+      "cjs"
+    ],
+    "splitting": false,
+    "sourcemap": true,
+    "clean": true,
+    "minify": false
+  },
+  "packageManager": "yarn@4.6.0",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs --dts",
+    "dev": "tsup src/index.ts --format cjs --dts --watch"
+  },
+  "devDependencies": {
+    "@yarnpkg/types": "^4.0.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@fastify/deepmerge": "^2.0.2"
+  },
+  "files": [
+    "README.md",
+    "dist/"
+  ]
+}
