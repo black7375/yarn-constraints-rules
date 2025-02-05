@@ -1,5 +1,6 @@
 {
   "name": "yarn-constraints-rules",
+  "description": "Enforcing dependency constraints across your Yarn workspaces",
   "main": "dist/index.js",
   "version": "0.1.0",
   "types": "dist/index.d.ts",

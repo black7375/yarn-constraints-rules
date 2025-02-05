@@ -16,7 +16,7 @@ and correctness in your project setup.
 ## Installation
 
 ```sh
-yarn add yarn-constraints
+yarn add -D yarn-constraints
 ```
 
 ## Usage
