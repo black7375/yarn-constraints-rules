@@ -16,7 +16,7 @@ and correctness in your project setup.
 ## Installation
 
 ```sh
-yarn add -D yarn-constraints
+yarn add -D @yarnpkg/types yarn-constraints-rules
 ```
 
 ## Usage
@@ -27,6 +27,7 @@ Import the required functions in your project:
 // @ts-check
 
 // Your `yarn.config.cjs`
+const { defineConfig } = require("@yarnpkg/types");
 const {
   forbidDependency,
   ensureDependencyConsistency,
@@ -34,9 +35,7 @@ const {
   enforcePeerDependencyPresence
   enforceDependencyRanges,
   enforceFieldsOnAllWorkspaces,
-} = require("yarn-constraints");
-
-const {defineConfig} = require("@yarnpkg/types");
+} = require("yarn-constraints-rules");
 
 module.exports = defineConfig({
   constraints: async (ctx) => {
